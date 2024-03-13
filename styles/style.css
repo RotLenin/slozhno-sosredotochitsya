@@ -1,5 +1,45 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@import "page.css";
+@import "header.css";
+@import "section.css";
+@import "footer.css";
 
-.page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+.decorated-zone {
+    position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+}
+
+.decorated-zone::before {
+    right: 10px;
+    top: 10px;
+    border-right: var(--border);
+    border-top: var(--border);
+}
+
+.decorated-zone::after {
+    left: 10px;
+    bottom: 10px;
+    border-left: var(--border);
+    border-bottom: var(--border);
+}
+
+.shadow {
+    text-shadow: var(--shadow);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--bg-color);
+    gap: 40px;
 }

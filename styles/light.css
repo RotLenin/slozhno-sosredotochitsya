@@ -1,12 +1,8 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    --bg-color : var(--light-bg);
+    --text-color : var(--light-main-text);
+    --text-second-color : var(--light-second-text);
+    --decorative-color : var(--light-decoration-color);
+    --border : 1px solid var(--text-color);
+    --shadow : 4px 4px 0px var(--text-second-color);
 }

@@ -1,0 +1,103 @@
+.header {
+    height: 100vh;
+    background-image: url("../images/cover-image.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.theme_dark .header {
+    background-image: url("../images/cover-image-dark.png");
+}
+
+.theme_light .header {
+    background-image: url("../images/cover-image-light.png");
+}
+
+.header__theme-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    color: var(--text-second-color);
+    font: var(--font-s);
+}
+
+.header__rec {
+    width: 70px;
+    height: 26px;
+    position: relative;
+    font: inherit;
+    color: inherit;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__rec::after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--text-second-color);
+}
+
+.theme_light .header__rec {
+    visibility: hidden;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font: var(--font-s);
+}
+
+.header__theme-menu-item {
+    list-style: none;
+}
+
+.header__theme-menu-button {
+    font: inherit;
+    color: inherit;
+    width: 70px;
+    height: 26px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    text-transform: lowercase;
+}
+
+.theme_light .header__theme-menu-button {
+    color: var(--text-color);
+}
+
+.header__title {
+    font: var(--font-xl);
+    color: var(--decorative-color);
+}
+
+.header__description {
+    font: var(--font-s);
+    font-weight: var(--fw-bold);
+    background-color: var(--text-second-color);
+    color: var(--bg-color);
+}
+
+.theme_light .header__description {
+    color: var(--text-color)
+}

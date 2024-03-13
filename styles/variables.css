@@ -2,3 +2,30 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+    /* DARK */
+    --dark-bg : #000028;
+    --dark-main-text : #F1B2CE;
+    --dark-second-text : #FF0070;
+    --dark-decoration-color: #DB00FF;
+
+    /* LIGHT */
+    --light-bg : #FFF1F7;
+    --light-main-text : #353430;
+    --light-second-text : #FF8DCB;
+    --light-decoration-color : #FFC2E6;
+
+    /* FONTS */
+    --IBM-plex-mono : 'IBM Plex mono', sans-serif;
+
+    --fw-normal : 400;
+    --fw-bold : 700;
+
+    --font-size-s: 18px;
+    --font-line-s : 130%;
+    --font-s: var(--fw-normal) var(--font-size-s) / var(--font-line-s) var(--IBM-plex-mono);
+
+    --font-size-xl: 116px;
+    --font-line-xl: 82.5%;
+    --font-xl: var(--fw-bold) var(--font-size-xl) / var(--font-line-xl) var(--IBM-plex-mono);
+}
