@@ -9,4 +9,5 @@
 .footer__title {
     font: var(--font-xl);
     color: var(--decorative-color);
+    text-shadow: 2px 2px 0 var(--text-second-color);
 }

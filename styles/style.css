@@ -35,11 +35,15 @@
     text-shadow: var(--shadow);
 }
 
+.link {
+    text-shadow: 0 4px 4px var(--text-second-color);
+}
+
 .main {
+    /** HOTFIX - какой то баг с picture - на 5px больше чем должен быть */
+    padding: 40px 0 35px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    gap: 50px;
     background-color: var(--bg-color);
-    gap: 40px;
 }

@@ -2,11 +2,9 @@
     width: 100%;
     padding: 0 10px;
     font: var(--font-s);
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -38,6 +36,7 @@
 }
 
 .section__list {
+    padding-top: 10px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -72,14 +71,165 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    /** HOTFIX - какой то баг с picture - на 5px больше чем должен быть */
+    gap: 5px;
 }
 
 .section__picture {
     width: 100%;
+    height: auto;
 }
 
 .section__img {
     width: 100%;
     object-fit: contain;
+    padding: 0;
+    margin: 0;
+}
+
+@media (width >= 768px) or (height >= 768px){
+    .section__img-wrapper {
+        display: grid;
+        grid-template-areas:
+    "one one two"
+    "three four two"
+    "three five five";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 33vh);
+        gap: 20px;
+    }
+
+    .section__picture {
+        height: 100%;
+    }
+
+    .section__img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .section__picture:nth-child(1) {
+        grid-area: one;
+    }
+
+    .section__picture:nth-child(2) {
+        grid-area: two;
+    }
+
+    .section__picture:nth-child(3) {
+        grid-area: three;
+    }
+
+    .section__picture:nth-child(4) {
+        grid-area: four;
+    }
+
+    .section__picture:nth-child(5) {
+        grid-area: five;
+    }
+}
+
+.section__one-header,
+.section__one-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (width >= 768px) or (height >= 768px){
+    .section__one {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "header block"
+    }
+
+    .section__one-header {
+        grid-area: header;
+    }
+
+    .section__one-block {
+        grid-area: block;
+    }
+}
+
+.section__two-header,
+.section__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section__two-content {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (width >= 768px) or (height >= 768px) {
+    .section__two {
+        display: grid;
+        grid-template-areas:
+    "header . ."
+    "content content content"
+    }
+
+    .section__two-header {
+        grid-area: header;
+    }
+
+    .section__two-content {
+        grid-area: content;
+    }
+}
+
+@media (width >= 1024px) and (height >= 768px) {
+    .section__two {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+        grid-template-areas:
+    "header . ."
+    "content content content"
+    }
+
+    .section__two-content {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (width >= 768px) and (height >= 1024px) {
+    .section__two {
+        width: 100%;
+        grid-template-columns: repeat(3, fit-content(1fr));
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+    }
+}
+
+@media (width >= 768px) or (height >= 768px) {
+    .section__three {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+    "header content content"
+    }
+
+    .section__three .section__three-header {
+        grid-area: header;
+    }
+
+    .section__three .section__wrapper {
+        grid-area: content;
+    }
 }
