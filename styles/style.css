@@ -1,7 +1,10 @@
-@import "page.css";
 @import "header.css";
 @import "section.css";
 @import "footer.css";
+
+.page {
+    background-attachment: fixed
+}
 
 .decorated-zone {
     position: relative;

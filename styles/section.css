@@ -8,14 +8,6 @@
     gap: 20px;
 }
 
-@media (height >= 768) or (width >= 768px) {
-    /*
-    .section {
-
-    }
-     */
-}
-
 .section__title {
     font: inherit;
     color: var(--text-second-color);
@@ -95,7 +87,7 @@
     margin: 0;
 }
 
-@media (width >= 768px) or (height >= 768px){
+@media (width >= 768px) or (height >= 768px) {
     .section__img-wrapper {
         padding-top: 10px;
         display: grid;
@@ -153,7 +145,7 @@
     gap: 20px;
 }
 
-@media (width >= 768px) or (height >= 768px){
+@media (width >= 768px) or (height >= 768px) {
     .section__one {
         grid-template-rows: 1fr;
         grid-template-columns: 32% 1fr;
