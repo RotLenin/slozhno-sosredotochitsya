@@ -1,11 +1,19 @@
 .section {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 var(--padding);
     font: var(--font-s);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     gap: 20px;
+}
+
+@media (height >= 768) or (width >= 768px) {
+    /*
+    .section {
+
+    }
+     */
 }
 
 .section__title {
@@ -82,20 +90,21 @@
 
 .section__img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     padding: 0;
     margin: 0;
 }
 
 @media (width >= 768px) or (height >= 768px){
     .section__img-wrapper {
+        padding-top: 10px;
         display: grid;
         grid-template-areas:
     "one one two"
     "three four two"
     "three five five";
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 33vh);
+        grid-template-rows: 24% 29% 40%;
         gap: 20px;
     }
 
@@ -129,6 +138,12 @@
     }
 }
 
+@media (width >= 768px) {
+    .section__img-wrapper {
+        grid-template-rows: 24% 30% 41%;
+    }
+}
+
 .section__one-header,
 .section__one-block {
     display: flex;
@@ -141,7 +156,7 @@
 @media (width >= 768px) or (height >= 768px){
     .section__one {
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 32% 1fr;
         grid-template-areas:
             "header block"
     }
@@ -210,7 +225,7 @@
 @media (width >= 768px) and (height >= 1024px) {
     .section__two {
         width: 100%;
-        grid-template-columns: repeat(3, fit-content(1fr));
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
         gap: 20px;
     }
@@ -219,8 +234,9 @@
 @media (width >= 768px) or (height >= 768px) {
     .section__three {
         display: grid;
+        gap: 20px;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 32% 1fr;
         grid-template-areas:
     "header content content"
     }

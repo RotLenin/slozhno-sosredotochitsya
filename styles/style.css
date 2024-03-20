@@ -31,6 +31,22 @@
     border-bottom: var(--border);
 }
 
+@media (width >= 768px) or (height >= 768px) {
+    .decorated-zone::before {
+        right: 20px;
+        top: 20px;
+        border-right: var(--border);
+        border-top: var(--border);
+    }
+
+    .decorated-zone::after {
+        left: 20px;
+        bottom: 20px;
+        border-left: var(--border);
+        border-bottom: var(--border);
+    }
+}
+
 .shadow {
     text-shadow: var(--shadow);
 }
@@ -46,4 +62,11 @@
     flex-direction: column;
     gap: 50px;
     background-color: var(--bg-color);
+}
+
+@media (height >= 768) or (width >= 768px) {
+    .main {
+        padding : 60px 0 45px;
+        gap: 80px;
+    }
 }

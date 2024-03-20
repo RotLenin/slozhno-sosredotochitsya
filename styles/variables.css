@@ -28,4 +28,29 @@
     --font-size-xl: 116px;
     --font-line-xl: 82.5%;
     --font-xl: var(--fw-bold) var(--font-size-xl) / var(--font-line-xl) var(--IBM-plex-mono);
+    --padding : 10px;
+}
+
+@media (height >= 768px) {
+    :root {
+        --font-size-xl: 120px;
+    }
+}
+
+@media (width > 768px) {
+    :root {
+        --font-size-xl: 157px;
+    }
+}
+
+@media (height >= 768px) {
+    :root {
+        --padding : 20px;
+    }
+}
+
+@media (width >= 768px) {
+    :root {
+        --padding : 20px;
+    }
 }
