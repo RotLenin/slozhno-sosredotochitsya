@@ -1,5 +1,4 @@
-.page.theme_light,
-.page.theme_auto {
+.page.theme_light {
     --bg-color : var(--light-bg);
     --text-color : var(--light-main-text);
     --text-second-color : var(--light-second-text);
@@ -9,7 +8,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
+    .page.theme_auto {
         --bg-color : var(--light-bg);
         --text-color : var(--light-main-text);
         --text-second-color : var(--light-second-text);
