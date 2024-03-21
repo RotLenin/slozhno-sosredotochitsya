@@ -1,4 +1,5 @@
-.page.theme_light {
+.page.theme_light,
+.page.theme_auto {
     --bg-color : var(--light-bg);
     --text-color : var(--light-main-text);
     --text-second-color : var(--light-second-text);

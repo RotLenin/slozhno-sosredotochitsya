@@ -22,7 +22,8 @@
     background-image: url("../images/cover-image-dark.png");
 }
 
-.theme_light .header {
+.theme_light .header,
+.theme_auto .header {
     background-image: url("../images/cover-image-light.png");
 }
 
