@@ -6,3 +6,14 @@
     --border : 1px solid var(--dark-second-text);
     --shadow : 4px 4px 0px var(--text-second-color);
 }
+
+@media (prefers-color-scheme: dark) {
+    .page.theme_auto {
+        --bg-color : var(--dark-bg);
+        --text-color : var(--dark-main-text);
+        --text-second-color : var(--dark-second-text);
+        --decorative-color : var(--dark-decoration-color);
+        --border : 1px solid var(--dark-second-text);
+        --shadow : 4px 4px 0px var(--text-second-color);
+    }
+}
