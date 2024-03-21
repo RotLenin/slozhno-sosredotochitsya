@@ -22,6 +22,10 @@
     background-image: url("../images/cover-image-dark.png");
 }
 
+.theme_light .header {
+    background-image: url("../images/cover-image-light.png");
+}
+
 @media (prefers-color-scheme: light) {
     .theme_auto .header {
         background-image: url("../images/cover-image-light.png");
