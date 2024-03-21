@@ -1,8 +1,19 @@
-.page.theme_light {
+:root.theme_light {
     --bg-color : var(--light-bg);
     --text-color : var(--light-main-text);
     --text-second-color : var(--light-second-text);
     --decorative-color : var(--light-decoration-color);
     --border : 1px solid var(--text-color);
     --shadow : 4px 4px 0px var(--text-second-color);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color : var(--light-bg);
+        --text-color : var(--light-main-text);
+        --text-second-color : var(--light-second-text);
+        --decorative-color : var(--light-decoration-color);
+        --border : 1px solid var(--text-color);
+        --shadow : 4px 4px 0px var(--text-second-color);
+    }
 }
