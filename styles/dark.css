@@ -1,4 +1,4 @@
-:root.theme_dark {
+.page.theme_dark {
     --bg-color : var(--dark-bg);
     --text-color : var(--dark-main-text);
     --text-second-color : var(--dark-second-text);
