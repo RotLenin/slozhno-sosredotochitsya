@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    height: calc(100vh - var(--padding) * 2);
+    height: 100vh;
     min-height: 668px;
     display: flex;
     flex-direction: column;
@@ -90,22 +90,41 @@
 
 .header__title {
     position: absolute;
-    top: calc(50% - clamp(1em / 2, -1 * (100vw - 550px), 1em));
+    top: calc(50% - .8em);
     width: 100%;
     text-align: left;
     font: var(--font-xl);
     color: var(--decorative-color);
 }
 
+@media (width >= 600px) {
+    .header__title {
+        top: calc(50% - 1em / 2)
+    }
+}
+
 .header__description {
     position: absolute;
-    top: 70%;
-    width: clamp(355px, 50%, 500px);
+    top: 72.5%;
+    width: clamp(355px, 47.5%, 490px);
     font: var(--font-s);
     font-weight: var(--fw-bold);
     background-color: var(--bg-second-color);
     color: var(--text-second-color);
     align-self: flex-end;
+}
+
+@media (height >= 768px) {
+    .header__description {
+        top: 71%;
+    }
+}
+
+@media (width >= 1024px) {
+    .header__description {
+        width: 490px;
+        top: 73.5%;
+    }
 }
 
 .theme_light .header__description {
