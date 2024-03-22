@@ -1,19 +1,10 @@
 .page.theme_dark {
     --bg-color : var(--dark-bg);
     --text-color : var(--dark-main-text);
-    --text-second-color : var(--dark-second-text);
+    --text-second-color : var(--dark-bg);
+    --bg-second-color: var(--dark-second-text);
+    --bg-secong-color-alpha: var(--dark-second-text-alpha);
     --decorative-color : var(--dark-decoration-color);
     --border : 1px solid var(--dark-second-text);
-    --shadow : 4px 4px 0px var(--text-second-color);
-}
-
-@media (prefers-color-scheme: dark) {
-    .page.theme_auto {
-        --bg-color : var(--dark-bg);
-        --text-color : var(--dark-main-text);
-        --text-second-color : var(--dark-second-text);
-        --decorative-color : var(--dark-decoration-color);
-        --border : 1px solid var(--dark-second-text);
-        --shadow : 4px 4px 0px var(--text-second-color);
-    }
+    --shadow : 4px 4px 0px var(--bg-second-color);
 }

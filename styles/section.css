@@ -9,8 +9,9 @@
 }
 
 .section__title {
+    align-self: flex-start;
     font: inherit;
-    color: var(--text-second-color);
+    color: var(--bg-second-color);
 }
 
 .theme_light .section__title {
@@ -22,8 +23,8 @@
     width: 100%;
     font: inherit;
     font-weight: var(--fw-bold);
-    color: var(--bg-color);
-    background-color: var(--text-second-color);
+    color: var(--text-second-color);
+    background-color: var(--bg-second-color);
 }
 
 .theme_light .section__sub-title {
@@ -35,7 +36,7 @@
     color: var(--text-color);
 }
 
-.section__list {
+.section__list-wrapper {
     padding-top: 10px;
     width: 100%;
     display: flex;
@@ -57,8 +58,8 @@
 .section__list-item__header {
     width: 100%;
     font: inherit;
-    color: var(--bg-color);
-    background-color: var(--text-second-color);
+    color: var(--text-second-color);
+    background-color: var(--bg-second-color);
 }
 
 .section__list-item__paragraph {
@@ -136,8 +137,8 @@
     }
 }
 
-.section__one-header,
-.section__one-block {
+.section__about-header,
+.section__about-block {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -146,23 +147,23 @@
 }
 
 @media (width >= 768px) or (height >= 768px) {
-    .section__one {
+    .section__about {
         grid-template-rows: 1fr;
         grid-template-columns: 32% 1fr;
         grid-template-areas:
             "header block"
     }
 
-    .section__one-header {
+    .section__about-header {
         grid-area: header;
     }
 
-    .section__one-block {
+    .section__about-block {
         grid-area: block;
     }
 }
 
-.section__two-header,
+.section__info-header,
 .section__wrapper {
     display: flex;
     justify-content: flex-start;
@@ -171,7 +172,7 @@
     gap: 10px;
 }
 
-.section__two-content {
+.section__info-content {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
@@ -179,24 +180,24 @@
 }
 
 @media (width >= 768px) or (height >= 768px) {
-    .section__two {
+    .section__info {
         display: grid;
         grid-template-areas:
     "header . ."
     "content content content"
     }
 
-    .section__two-header {
+    .section__info-header {
         grid-area: header;
     }
 
-    .section__two-content {
+    .section__info-content {
         grid-area: content;
     }
 }
 
 @media (width >= 1024px) and (height >= 768px) {
-    .section__two {
+    .section__info {
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -206,7 +207,7 @@
     "content content content"
     }
 
-    .section__two-content {
+    .section__info-content {
         width: 100%;
         display: grid;
         grid-auto-flow: column;
@@ -215,7 +216,7 @@
 }
 
 @media (width >= 768px) and (height >= 1024px) {
-    .section__two {
+    .section__info {
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -224,7 +225,7 @@
 }
 
 @media (width >= 768px) or (height >= 768px) {
-    .section__three {
+    .section__list {
         display: grid;
         gap: 20px;
         grid-template-rows: 1fr;
@@ -233,11 +234,12 @@
     "header content content"
     }
 
-    .section__three .section__three-header {
+    .section__list .section__list-header {
         grid-area: header;
+        align-self: flex-start;
     }
 
-    .section__three .section__wrapper {
+    .section__list .section__wrapper {
         grid-area: content;
     }
 }

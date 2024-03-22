@@ -7,12 +7,14 @@
     --dark-bg : #000028;
     --dark-main-text : #F1B2CE;
     --dark-second-text : #FF0070;
+    --dark-second-text-alpha : rgba(255, 0, 112, .4);
     --dark-decoration-color: #DB00FF;
 
     /* LIGHT */
     --light-bg : #FFF1F7;
     --light-main-text : #353430;
     --light-second-text : #FF8DCB;
+    --light-second-text-alpha : rgba(50, 49, 45, .4);
     --light-decoration-color : #FFC2E6;
 
     /* FONTS */
@@ -40,6 +42,7 @@
 @media (width > 768px) {
     :root {
         --font-size-xl: 157px;
+        --font-line-xl: 100%;
     }
 }
 

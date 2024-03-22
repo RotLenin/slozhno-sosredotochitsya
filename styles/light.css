@@ -1,19 +1,10 @@
 .page.theme_light {
     --bg-color : var(--light-bg);
     --text-color : var(--light-main-text);
-    --text-second-color : var(--light-second-text);
+    --text-second-color : var(--light-main-text);
+    --bg-second-color : var(--light-second-text);
+    --bg-secong-color-alpha: var(--light-second-text-alpha);
     --decorative-color : var(--light-decoration-color);
     --border : 1px solid var(--text-color);
-    --shadow : 4px 4px 0px var(--text-second-color);
-}
-
-@media (prefers-color-scheme: light) {
-    .page.theme_auto {
-        --bg-color : var(--light-bg);
-        --text-color : var(--light-main-text);
-        --text-second-color : var(--light-second-text);
-        --decorative-color : var(--light-decoration-color);
-        --border : 1px solid var(--text-color);
-        --shadow : 4px 4px 0px var(--text-second-color);
-    }
+    --shadow : 4px 4px 0px var(--bg-second-color);
 }

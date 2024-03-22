@@ -1,13 +1,15 @@
 .footer {
-    height: 100vh;
+    position: relative;
+    padding: var(--padding);
+    height: 100%;
+    min-height: 668px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color);
 }
 
 .footer__title {
     font: var(--font-xl);
     color: var(--decorative-color);
-    text-shadow: 2px 2px 0 var(--text-second-color);
+    text-shadow: var(--shadow);
 }
