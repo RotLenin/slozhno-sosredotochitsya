@@ -1,5 +1,114 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@import "header.css";
+@import "section.css";
+@import "footer.css";
+
+:root {
+    --bg-color : var(--dark-bg);
+    --text-color : var(--dark-main-text);
+    --text-second-color : var(--dark-bg);
+    --bg-second-color: var(--dark-second-text);
+    --bg-secong-color-alpha: var(--dark-second-text-alpha);
+    --decorative-color : var(--dark-decoration-color);
+    --border : 1px solid var(--dark-second-text);
+    --shadow : 4px 4px 0px var(--bg-second-color);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color : var(--light-bg);
+        --text-color : var(--light-main-text);
+        --text-second-color : var(--light-main-text);
+        --bg-second-color : var(--light-second-text);
+        --bg-secong-color-alpha: var(--light-second-text-alpha);
+        --decorative-color : var(--light-decoration-color);
+        --border : 1px solid var(--text-color);
+        --shadow : 4px 4px 0px var(--bg-second-color);
+    }
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+}
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    background-color: var(--bg-color);
+    background-position: 0 0;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-attachment: fixed;
+}
+
+.page.theme_dark {
+    background-image: url("../images/cover-image-dark.png");
+}
+
+.page.theme_light {
+    background-image: url("../images/cover-image-light.png");
+}
+
+.decorated-zone {
+    position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+}
+
+.decorated-zone::before {
+    right: var(--padding);
+    top: var(--padding);
+    border-right: var(--border);
+    border-top: var(--border);
+}
+
+.decorated-zone::after {
+    left: var(--padding);
+    bottom: var(--padding);
+    border-left: var(--border);
+    border-bottom: var(--border);
+}
+
+.shadow {
+    text-shadow: var(--shadow);
+}
+
+.link {
+    display: inline-block;
+    text-shadow: 2px 2px 0 var(--bg-second-color);
+    text-decoration: none;
+    line-height: 100%;
+}
+
+.link:hover {
+    border-bottom: 1px solid currentColor;
+}
+
+.link:focus-within {
+    outline: 1px solid currentColor;
+}
+
+.main {
+    /** HOTFIX - какой то баг с picture - на 5px больше чем должен быть */
+    padding: 40px 0 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--bg-color);
+}
+
+@media (height >= 768) or (width >= 768px) {
+    .main {
+        padding : 60px 0 45px;
+        gap: 80px;
+    }
 }
